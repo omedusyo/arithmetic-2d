@@ -1,0 +1,15 @@
+{
+  "name": "arithmetic-2d",
+  "version": "1.0.0",
+  "description": "Library for arithmetic with 2D points and vectors",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "parcel public/index.html"
+  },
+  "author": "Yuriy Dupyn",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {}
+}
