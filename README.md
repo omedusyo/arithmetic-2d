@@ -1,4 +1,14 @@
 
+# Installation
+```
+npm install https://github.com/omedusyo/arithmetic-2d.git
+```
+
+# Usage
+```
+import { Point, Vector } from "arithmetic-2d";
+```
+
 # Interface
 The types Distance, Angle[radian], Angle[degree] are just Number.
 
