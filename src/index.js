@@ -35,13 +35,13 @@ Vector.innerProduct = (v, w) => v.x*w.x + v.y*w.y;
 Vector.norm = v => Math.sqrt(v.x**2 + v.y**2);
 
 // Point, Point -> Distance
-Point.distance = (P, Q) => Vector.norm(Math.sub(P, Q));
+Point.distance = (P, Q) => Vector.norm(Point.sub(P, Q));
 // assumes non-zero vector as input
 // Vector -> Vector
-Vector.normalize = v => scale(v, 1/norm(v));
+Vector.normalize = v => Vector.scale(v, 1/Vector.norm(v));
 // TODO: maybe encorporate units?
 // Vector, Vector -> Angle[radian]
-Vector.angleRad = (v, w) => Math.acos(innerProduct(normalize(v), normalize(w)));
+Vector.angleRad = (v, w) => Math.acos(Vector.innerProduct(Vector.normalize(v), Vector.normalize(w)));
 // Vector, Vector -> Angle[degree]
-Vector.angleDeg = (v, w) => Math.acos(innerProduct(normalize(v), normalize(w)))*360/(2*Math.PI);
+Vector.angleDeg = (v, w) => Math.acos(Vector.innerProduct(Vector.normalize(v), Vector.normalize(w)))*360/(2*Math.PI);
 
