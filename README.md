@@ -25,11 +25,18 @@ Point.show  : Point -> String
 Vector.show : Point -> String
 ```
 
+## Equality
+```
+Point.eq  : Point,  Point  -> Bool
+Vector.eq : Vector, Vector -> Bool
+```
+
 ## Affine and Vector structure
 ```
 Point.add : Point, Vector -> Point
 Point.sub : Point, Point -> Vector
 
+Vector.zero  : Vector
 Vector.add   : Vector, Vector -> Vector
 Vector.scale : Number, Vector -> Vector
 Vector.neg   : Vector -> Vector
