@@ -5,6 +5,7 @@ export function Point(x, y) {
   Object.freeze(P);
   return P;
 }
+Point.eq = (P, Q) => P.x === Q.x && P.y === Q.y;
 // Point -> String
 Point.show = P => `Point(${P.x}, ${P.y})`;
 // Point, Vector -> Point
@@ -19,6 +20,8 @@ export function Vector(x, y) {
   Object.freeze(v);
   return v;
 }
+Vector.zero = Vector(0, 0);
+Vector.eq = (v, w) => v.x === w.x && v.y === w.y;
 // Point -> String
 Vector.show = v => `Vector(${v.x}, ${v.y})`;
 // Vector, Vector -> Vector
